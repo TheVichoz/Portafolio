@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio VR & IA | VichozDeveloper</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    body { background-color: #121212; color: white; }
+    .section-title { text-align: center; margin-bottom: 40px; font-weight: bold; }
+    
+    .project-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .project-card:hover { transform: scale(1.05); }
+
+    .card {
+      background: #1E1E1E;
+      color: white;
+      border-radius: 10px;
+      height: 100%;
+    }
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  object-position: center 20%; /* Esto lo ajusta verticalmente */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+    .btn-primary { background: #00A3FF; border: none; }
+    .btn-secondary { background: #555; border: none; }
+
+    .tech-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .tech-icons img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+      transition: transform 0.2s ease-in-out;
+      border-radius: 8px;
+      background-color: #fff;
+      padding: 6px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .tech-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    .tech-icons img.xr-icon {
+      object-fit: cover;
+      background-color: #fff;
+      padding: 0;
+      border: none;
+      width: 60px;
+      height: 45px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="container text-center mt-5">
+    <h1>🚀 Portafolio de Proyectos VR & IA</h1>
+    <p class="lead">Explora mis proyectos de Realidad Virtual y Inteligencia Artificial.</p>
+  </header>
+
+  <ul class="nav nav-pills justify-content-center mt-4">
+    <li class="nav-item">
+      <a class="nav-link active" data-bs-toggle="pill" href="#vr">🎮 Realidad Virtual</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="pill" href="#ia">🤖 Inteligencia Artificial</a>
+    </li>
+  </ul>
+
+  <div class="tab-content container mt-4">
+    <!-- VR -->
+    <div class="tab-pane fade show active" id="vr">
+      <h2 class="section-title">🎮 Proyectos de Realidad Virtual</h2>
+      <div class="row">
+        <!-- Reynera -->
+        <div class="col-md-6 mb-4" data-aos="fade-up">
+          <div class="card project-card">
+            <img src="img/ReyneraProyecto.JPG" class="card-img-top" alt="Proyecto Reynera" />
+            <div class="card-body">
+              <h5 class="card-title">Simulador de Empaque VR - Reynera</h5>
+              <p class="card-text">Simulador VR para capacitar empleados sin afectar la producción.</p>
+              <a href="#" class="btn btn-primary">🎥 Ver Video</a>
+              <a href="#" class="btn btn-secondary">📄 Más Detalles</a>
+              <div class="tech-icons">
+                <img src="img/Unity-logo.png" alt="Unity" title="Unity" />
+                <img src="img/Oculus-Logo.png" alt="Oculus" title="Oculus Quest" />
+                <img src="img/Csharp-logo.png" alt="C#" title="C#" />
+                <img src="img/UltimateXR-logo.png" alt="UltimateXR" title="UltimateXR" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kaanbale -->
+        <div class="col-md-6 mb-4" data-aos="fade-up">
+          <div class="card project-card">
+            <img src="img/KaanbaleProyecto.JPG" class="card-img-top" alt="Proyecto Kaanbale" />
+            <div class="card-body">
+              <h5 class="card-title">Simulador de Física VR - Kaanbale</h5>
+              <p class="card-text">Simulador educativo de física en VR para un aprendizaje interactivo.</p>
+              <a href="#" class="btn btn-primary">🎥 Ver Video</a>
+              <a href="#" class="btn btn-secondary">📄 Más Detalles</a>
+              <div class="tech-icons">
+                <img src="img/Unity-logo.png" alt="Unity" title="Unity" />
+                <img src="img/Oculus-Logo.png" alt="Oculus" title="Oculus Quest" />
+                <img src="img/Csharp-logo.png" alt="C#" title="C#" />
+                <img src="img/Interaction-logo.jpg" alt="XR Interaction Toolkit" title="XR Interaction Toolkit" class="xr-icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feria del Libro (centrado abajo) -->
+        <div class="col-md-6 offset-md-3 mb-4" data-aos="fade-up">
+          <div class="card project-card">
+            <img src="img/FeriaDelLibro1.JPG" class="card-img-top" alt="Feria del Libro VR" />
+            <div class="card-body">
+              <h5 class="card-title">Tesla & Energía VR - Feria del Libro</h5>
+              <p class="card-text">Experiencia VR sobre baterías Tesla y su impacto en la energía limpia.</p>
+              <a href="#" class="btn btn-primary">🎥 Ver Video</a>
+              <a href="#" class="btn btn-secondary">📄 Más Detalles</a>
+              <div class="tech-icons">
+                <img src="img/Unity-logo.png" alt="Unity" title="Unity" />
+                <img src="img/Oculus-Logo.png" alt="Oculus" title="Oculus Quest" />
+                <img src="img/Csharp-logo.png" alt="C#" title="C#" />
+                <img src="img/UltimateXR-logo.png" alt="UltimateXR" title="UltimateXR" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IA -->
+    <div class="tab-pane fade" id="ia">
+      <h2 class="section-title">🤖 Proyecto de Inteligencia Artificial</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4" data-aos="fade-up">
+          <div class="card project-card">
+            <img src="proyecto-ia1.jpg" class="card-img-top" alt="Proyecto IA 1" />
+            <div class="card-body">
+              <h5 class="card-title">Chatbot de Atención al Cliente</h5>
+              <p class="card-text">Desarrollo de un chatbot con IA para mejorar la atención al cliente.</p>
+              <a href="#" class="btn btn-primary">🎥 Ver Demo</a>
+              <a href="#" class="btn btn-secondary">📄 Más Detalles</a>
+              <div class="tech-icons">
+                <img src="python-icon.png" alt="Python" title="Python" />
+                <img src="tensorflow-icon.png" alt="TensorFlow" title="TensorFlow" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reconocimientos -->
+  <section class="container mt-5 text-center">
+    <h2 class="section-title">🏆 Reconocimientos</h2>
+    <p>Recibí un reconocimiento por mi participación en la Feria del Libro, donde presenté un proyecto VR sobre Tesla y Energía.</p>
+    <img src="reconocimiento-feria.jpg" class="img-fluid rounded shadow-lg" alt="Reconocimiento Feria del Libro" style="max-width: 50%;" />
+  </section>
+
+  <!-- Footer -->
+  <footer class="container text-center mt-5">
+    <p>© 2025 VichozDeveloper - Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
