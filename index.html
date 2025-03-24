@@ -21,7 +21,7 @@
     .card-img-top {
       height: 250px;
       object-fit: cover;
-      object-position: center 40%;
+      object-position: center 20%;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
     }
@@ -54,6 +54,22 @@
       height: 45px;
       border-radius: 6px;
     }
+    #contacto-flotante {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 250px;
+  z-index: 1050;
+  border-radius: 12px;
+  border: 1px solid #333;
+  backdrop-filter: blur(10px);
+  background-color: rgba(30, 30, 30, 0.95);
+  font-size: 0.9rem;
+}
+#contacto-flotante a:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
@@ -73,7 +89,6 @@
 </ul>
 
 <div class="tab-content container mt-4">
-  <!-- VR -->
   <div class="tab-pane fade show active" id="vr">
     <h2 class="section-title">🎮 Proyectos de Realidad Virtual</h2>
     <div class="row">
@@ -85,12 +100,12 @@
             <h5 class="card-title">Simulador de Empaque VR - Reynera</h5>
             <p class="card-text">Simulador VR para capacitar empleados sin afectar la producción.</p>
             <a href="#" class="btn btn-primary">🎥 Ver Video</a>
-            <a href="#" class="btn btn-secondary">📄 Más Detalles</a>
+            <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalReynera">📄 Más Detalles</a>
             <div class="tech-icons">
               <img src="img/Unity-logo.png" alt="Unity" title="Unity" />
               <img src="img/Oculus-Logo.png" alt="Oculus" title="Oculus Quest" />
               <img src="img/Csharp-logo.png" alt="C#" title="C#" />
-              <img src="img/UltimateXR-logo.png" alt="UltimateXR" title="UltimateXR" />
+              <img src="img/UltimateXr-logo.png" alt="UltimateXR" title="UltimateXR" />
             </div>
           </div>
         </div>
@@ -104,7 +119,7 @@
             <h5 class="card-title">Simulador de Física VR - Kaanbale</h5>
             <p class="card-text">Simulador educativo de física en VR para un aprendizaje interactivo.</p>
             <a href="#" class="btn btn-primary">🎥 Ver Video</a>
-            <a href="#" class="btn btn-secondary">📄 Más Detalles</a>
+            <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalKaanbale">📄 Más Detalles</a>
             <div class="tech-icons">
               <img src="img/Unity-logo.png" alt="Unity" title="Unity" />
               <img src="img/Oculus-Logo.png" alt="Oculus" title="Oculus Quest" />
@@ -123,12 +138,12 @@
             <h5 class="card-title">Tesla & Energía VR - Feria del Libro</h5>
             <p class="card-text">Experiencia VR sobre baterías Tesla y su impacto en la energía limpia.</p>
             <a href="#" class="btn btn-primary">🎥 Ver Video</a>
-            <a href="#" class="btn btn-secondary">📄 Más Detalles</a>
+            <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalFeria">📄 Más Detalles</a>
             <div class="tech-icons">
               <img src="img/Unity-logo.png" alt="Unity" title="Unity" />
               <img src="img/Oculus-Logo.png" alt="Oculus" title="Oculus Quest" />
               <img src="img/Csharp-logo.png" alt="C#" title="C#" />
-              <img src="img/UltimateXR-logo.png" alt="UltimateXR" title="UltimateXR" />
+              <img src="img/UltimateXr-logo.png" alt="UltimateXR" title="UltimateXR" />
             </div>
           </div>
         </div>
@@ -147,7 +162,7 @@
             <h5 class="card-title">Chatbot de Atención al Cliente</h5>
             <p class="card-text">Desarrollo de un chatbot con IA para mejorar la atención al cliente.</p>
             <a href="#" class="btn btn-primary">🎥 Ver Demo</a>
-            <a href="#" class="btn btn-secondary">📄 Más Detalles</a>
+            <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalIA">📄 Más Detalles</a>
             <div class="tech-icons">
               <img src="python-icon.png" alt="Python" title="Python" />
               <img src="tensorflow-icon.png" alt="TensorFlow" title="TensorFlow" />
@@ -159,22 +174,90 @@
   </div>
 </div>
 
-<!-- Reconocimientos -->
 <section class="container mt-5 text-center">
   <h2 class="section-title">🏆 Reconocimientos</h2>
   <p>Recibí un reconocimiento por mi participación en la Feria del Libro, donde presenté un proyecto VR sobre Tesla y Energía.</p>
   <img src="reconocimiento-feria.jpg" class="img-fluid rounded shadow-lg" alt="Reconocimiento Feria del Libro" style="max-width: 50%;" />
 </section>
 
-<!-- Footer -->
 <footer class="container text-center mt-5">
   <p>© 2025 VichozDeveloper - Todos los derechos reservados.</p>
 </footer>
+
+<!-- Modales -->
+<div class="modal fade" id="modalReynera" tabindex="-1" aria-labelledby="modalReyneraLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalReyneraLabel">Detalles - Reynera</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Simulador para capacitar personal en el proceso de empaque usando VR. Compatible con Oculus Quest, desarrollado en Unity y C# utilizando UltimateXR.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalKaanbale" tabindex="-1" aria-labelledby="modalKaanbaleLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalKaanbaleLabel">Detalles - Kaanbale</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Aplicación educativa para enseñar física a través de simulaciones interactivas en Realidad Virtual, desarrollada con Unity y XR Toolkit.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalFeria" tabindex="-1" aria-labelledby="modalFeriaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFeriaLabel">Detalles - Feria del Libro</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Experiencia interactiva sobre el uso de baterías Tesla y energía limpia. Proyecto presentado en la Feria del Libro con excelente recepción.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalIA" tabindex="-1" aria-labelledby="modalIALabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalIALabel">Detalles - Chatbot IA</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Chatbot construido con TensorFlow y Python para responder preguntas frecuentes y ofrecer soporte automatizado a los usuarios en tiempo real.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   AOS.init();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<div id="contacto-flotante" class="card text-white bg-dark p-3 shadow-lg">
+  <h5>📬 <strong>Contacto</strong></h5>
+  <p class="mb-1"><strong>Correo:</strong><br>
+    <a href="mailto:victorhernandez.fraga@gmail.com" class="text-info text-decoration-none">victorhernandez.fraga@gmail.com</a>
+  </p>
+  <p class="mb-1"><strong>Tel:</strong><br>
+    <span class="text-light">8281040259</span>
+  </p>
+  <p class="mb-1"><strong>Instagram:</strong><br>
+    <a href="https://instagram.com/adrian__fh" class="text-info text-decoration-none" target="_blank">@adrian__fh</a>
+  </p>
+  <p class="mb-0"><strong>YouTube:</strong><br>
+    <a href="https://youtube.com/@VichozDeveloper" class="text-info text-decoration-none" target="_blank">VichozDeveloper</a>
+  </p>
+</div>
 
 </body>
+
 </html>
