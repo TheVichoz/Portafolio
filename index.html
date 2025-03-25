@@ -55,21 +55,20 @@
       border-radius: 6px;
     }
     #contacto-flotante {
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  width: 250px;
-  z-index: 1050;
-  border-radius: 12px;
-  border: 1px solid #333;
-  backdrop-filter: blur(10px);
-  background-color: rgba(30, 30, 30, 0.95);
-  font-size: 0.9rem;
-}
-#contacto-flotante a:hover {
-  text-decoration: underline;
-}
-
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      width: 250px;
+      z-index: 1050;
+      border-radius: 12px;
+      border: 1px solid #333;
+      backdrop-filter: blur(10px);
+      background-color: rgba(30, 30, 30, 0.95);
+      font-size: 0.9rem;
+    }
+    #contacto-flotante a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -174,20 +173,21 @@
           </div>
         </div>
       </div>
-      
-
+    </div> <!-- 👈 ESTE DIV FALTABA, AHORA TODO FUNCIONA -->
+  </div>
+</div>
 
 <section class="container mt-5 text-center">
   <h2 class="section-title">🏆 Reconocimientos</h2>
   <p>Recibí un reconocimiento por mi participación en la Feria del Libro, donde presenté un proyecto VR sobre Tesla y Energía.</p>
-  <img src="reconocimiento-feria.jpg" class="img-fluid rounded shadow-lg" alt="Reconocimiento Feria del Libro" style="max-width: 50%;" />
+  <img src="img/R1.jpg" class="img-fluid rounded shadow-lg" alt="Reconocimiento Feria del Libro" style="max-width: 50%;" />
 </section>
 
 <footer class="container text-center mt-5">
   <p>© 2025 VichozDeveloper - Todos los derechos reservados.</p>
 </footer>
 
-<!-- Modales -->
+<!-- Modal - Reynera -->
 <div class="modal fade" id="modalReynera" tabindex="-1" aria-labelledby="modalReyneraLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content bg-dark text-white">
@@ -201,6 +201,8 @@
     </div>
   </div>
 </div>
+
+<!-- Modal - Kaanbale -->
 <div class="modal fade" id="modalKaanbale" tabindex="-1" aria-labelledby="modalKaanbaleLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content bg-dark text-white">
@@ -214,6 +216,8 @@
     </div>
   </div>
 </div>
+
+<!-- Modal - Feria del Libro -->
 <div class="modal fade" id="modalFeria" tabindex="-1" aria-labelledby="modalFeriaLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content bg-dark text-white">
@@ -227,6 +231,8 @@
     </div>
   </div>
 </div>
+
+<!-- Modal - Chatbot IA -->
 <div class="modal fade" id="modalIA" tabindex="-1" aria-labelledby="modalIALabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content bg-dark text-white">
@@ -235,17 +241,19 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p>Chatbot RAG con Ollama, DeepSeek-R1 y LangChain
-          Asistente conversacional construido con LangChain, Ollama y ChromaDB para responder preguntas basadas en el contenido del libro Foundations of LLMs. Utiliza un modelo de lenguaje local (DeepSeek-R1) para generar respuestas contextuales a partir de fragmentos semánticamente relevantes extraídos del PDF. Incluye interfaz web interactiva con Gradio y permite conversaciones tanto informativas como sociales.</p>
+        <p>Chatbot RAG con Ollama, DeepSeek-R1 y LangChain. Asistente conversacional construido con LangChain, Ollama y ChromaDB para responder preguntas basadas en el contenido del libro "Foundations of LLMs". Utiliza un modelo de lenguaje local (DeepSeek-R1) para generar respuestas contextuales a partir de fragmentos semánticamente relevantes extraídos del PDF. Incluye interfaz web interactiva con Gradio y permite conversaciones tanto informativas como sociales.</p>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   AOS.init();
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
 <div id="contacto-flotante" class="card text-white bg-dark p-3 shadow-lg">
   <h5>📬 <strong>Contacto</strong></h5>
   <p class="mb-1"><strong>Correo:</strong><br>
@@ -263,5 +271,4 @@
 </div>
 
 </body>
-
 </html>
